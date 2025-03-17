@@ -3,21 +3,21 @@ name = "simple-kv-server"
 version = "0.2.0"
 edition = "2021"
 
-# [[bin]]
-# name = "kvs"
-# path = "src/server.rs"
+[[bin]]
+name = "kvs"
+path = "src/server.rs"
 
-# [[bin]]
-# name = "kvc"
-# path = "src/client.rs"
+[[bin]]
+name = "kvc"
+path = "src/client.rs"
 
-# [[bin]]
-# name = "gen_cert"
-# path = "tools/gen_cert.rs"
+[[bin]]
+name = "gen_cert"
+path = "tools/gen_cert.rs"
 
-# [[bin]]
-# name = "gen_config"
-# path = "tools/gen_config.rs"
+[[bin]]
+name = "gen_config"
+path = "tools/gen_config.rs"
 
 [dependencies]
 anyhow = "1" # 错误处理
