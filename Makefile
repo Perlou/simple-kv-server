@@ -14,5 +14,8 @@ start-client:
 gen-cert:
 	@cargo run --bin gen_cert
 
+gen-config:
+	@cargo run --bin gen_config
+
 build-proto:
 	@BUILD_PROTO=1 cargo build
