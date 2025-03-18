@@ -89,22 +89,21 @@ impl ClientConfig {
     }
 }
 
-// TODO
-// #[cfg(test)]
-// mod tests {
-//     use super::*;
+#[cfg(test)]
+mod tests {
+    use super::*;
 
-//     #[test]
-//     fn server_config_should_be_loaded() {
-//         let result: Result<ServerConfig, toml::de::Error> =
-//             toml::from_str(include_str!("../fixtures/server.conf"));
-//         assert!(result.is_ok());
-//     }
+    #[test]
+    fn server_config_should_be_loaded() {
+        let result: Result<ServerConfig, toml::de::Error> =
+            toml::from_str(include_str!("../fixtures/server.conf"));
+        assert!(result.is_ok());
+    }
 
-//     #[test]
-//     fn client_config_should_be_loaded() {
-//         let result: Result<ClientConfig, toml::de::Error> =
-//             toml::from_str(include_str!("../fixtures/client.conf"));
-//         assert!(result.is_ok());
-//     }
-// }
+    #[test]
+    fn client_config_should_be_loaded() {
+        let result: Result<ClientConfig, toml::de::Error> =
+            toml::from_str(include_str!("../fixtures/client.conf"));
+        assert!(result.is_ok());
+    }
+}
