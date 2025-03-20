@@ -1,5 +1,5 @@
 use anyhow::Result;
-use simple_kv::{
+use simple_kv_server::{
     start_server_with_config, start_yamux_client_with_config, AppStream, ClientConfig,
     CommandRequest, ServerConfig, StorageConfig,
 };
