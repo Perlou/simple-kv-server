@@ -19,3 +19,25 @@ gen-config:
 
 build-proto:
 	@BUILD_PROTO=1 cargo build
+
+build-release-local:
+	@cargo build --release
+	@cp ~/.target/release/kvs ./bin
+
+build-release:
+	@cargo build --release
+	@cp ./target/release/kvs ./bin
+
+bump-release:
+	@cargo release $(RELEASE_TYPE) --no-dev-version --skip-publish --skip-tag
+
+show-tag:
+	@git tag -l --format='%(contents)' $(TAG)
+
+build-docker:
+	@docker build -t perlou/${IMAGE}:${TAG} .
+	@docker tag perlou/${IMAGE}:${TAG} perlou/${IMAGE}:latest
+
+push-docker:
+	@docker push perlou/${IMAGE}:${TAG}
+	@docker push perlou/${IMAGE}:latest
