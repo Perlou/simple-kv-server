@@ -54,11 +54,11 @@ tempfile = "3" # 处理临时目录和临时文件
 [build-dependencies]
 prost-build = "0.9" # 编译 protobuf
 
-# [[bench]]
-# name = "pubsub"
-# harness = false
+[[bench]]
+name = "pubsub"
+harness = false
 
-# [profile.bench]
-# debug = true
+[profile.bench]
+debug = true
 
 [workspace]
